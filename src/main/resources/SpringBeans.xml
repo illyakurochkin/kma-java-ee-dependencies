@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="hero1impl" class="org.example.heroes.heroesImplementations.Hero1">
+        <constructor-arg value="35"/>
+    </bean>
+    <bean id="hero2impl" class="org.example.heroes.heroesImplementations.Hero2">
+        <property name="weapon" ref="biggun"/>
+    </bean>
+    <bean id="superhero2impl" class="org.example.heroes.heroesImplementations.Hero2">
+        <property name="weapon" ref="minigun"/>
+    </bean>
+    <bean id="biggun" class="org.example.heroes.weaponImplementations.BigGun"/>
+    <bean id="minigun" class="org.example.heroes.weaponImplementations.MiniGun"/>
+</beans>
